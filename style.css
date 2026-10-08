@@ -1,0 +1,15 @@
+body {
+  background-color: powderblue;
+}
+
+h1 {
+  color: rgb(0, 0, 255);
+  text-align: center;
+}
+
+p {
+  color: rgb(9, 235, 9);
+  font-size: 20px;
+  text-align: center;
+
+}
