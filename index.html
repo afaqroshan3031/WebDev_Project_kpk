@@ -30,41 +30,65 @@
     </section>
 
     <main>
-        <!-- Car of the Week - Ferrari F40 -->
-        <section class="car-of-week" id="featured">
-            <img src="https://images.unsplash.com/photo-1762857341277-333d9d9991fd?w=800" alt="Ferrari F40" class="featured-image">
-            
-            <div class="featured-text">
-                <h2>Car of the Week</h2>
-                <h3>Ferrari F40</h3>
-                <p>An absolute legend. Raw, focused and still one of the most exciting cars ever built. Pure driving experience with no unnecessary extras.</p>
-                
-                <p><strong>Why it stands out:</strong></p>
-                <ul class="features">
-                    <li>Twin-turbo V8 and iconic design</li>
-                    <li>Built for the road and the track</li>
-                    <li>Timeless classic status</li>
-                </ul>
-            </div>
-        </section>
+        <!-- Two cards side by side -->
+        <div class="cars-grid">
 
-        <!-- Most Viewed Car - BMW M4 Competition -->
-        <section class="car-of-week most-viewed">
-            <img src="https://images.unsplash.com/photo-1750509167705-6a53a9cf2a52?w=800" alt="BMW M4 Competition" class="featured-image">
-            
-            <div class="featured-text">
-                <h2>Most Viewed Car</h2>
-                <h3>BMW M4 Competition</h3>
-                <p>Sharp, modern and seriously quick. The M4 Competition is the car people keep coming back to look at — and for good reason.</p>
-                
-                <p><strong>Why it stands out:</strong></p>
-                <ul class="features">
-                    <li>503 hp twin-turbo straight-six</li>
-                    <li>Aggressive looks and daily usability</li>
-                    <li>One of the best modern performance cars</li>
-                </ul>
+            <!-- Card 1: Car of the Week -->
+            <div class="car-card" onclick="showDetails('f40')">
+                <img src="https://images.unsplash.com/photo-1762857341277-333d9d9991fd?w=600" alt="Ferrari F40" class="card-image">
+                <div class="card-label">
+                    <h2>Car of the Week</h2>
+                    <h3>Ferrari F40</h3>
+                    <p class="click-hint">Click for details</p>
+                </div>
             </div>
-        </section>
+
+            <!-- Card 2: Most Viewed Car -->
+            <div class="car-card" onclick="showDetails('m4')">
+                <img src="https://images.unsplash.com/photo-1750509167705-6a53a9cf2a52?w=600" alt="BMW M4 Competition" class="card-image">
+                <div class="card-label">
+                    <h2>Most Viewed Car</h2>
+                    <h3>BMW M4 Competition</h3>
+                    <p class="click-hint">Click for details</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Details panel (hidden by default) -->
+        <div id="details-panel" class="details-panel">
+            <button class="close-btn" onclick="hideDetails()">&times; Close</button>
+            
+            <div id="f40-details" class="car-details">
+                <img src="https://images.unsplash.com/photo-1762857341277-333d9d9991fd?w=800" alt="Ferrari F40" class="details-image">
+                <div class="details-text">
+                    <h2>Car of the Week</h2>
+                    <h3>Ferrari F40</h3>
+                    <p>An absolute legend. Raw, focused and still one of the most exciting cars ever built. Pure driving experience with no unnecessary extras.</p>
+                    <p><strong>Why it stands out:</strong></p>
+                    <ul class="features">
+                        <li>Twin-turbo V8 and iconic design</li>
+                        <li>Built for the road and the track</li>
+                        <li>Timeless classic status</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="m4-details" class="car-details">
+                <img src="https://images.unsplash.com/photo-1750509167705-6a53a9cf2a52?w=800" alt="BMW M4 Competition" class="details-image">
+                <div class="details-text">
+                    <h2>Most Viewed Car</h2>
+                    <h3>BMW M4 Competition</h3>
+                    <p>Sharp, modern and seriously quick. The M4 Competition is the car people keep coming back to look at — and for good reason.</p>
+                    <p><strong>Why it stands out:</strong></p>
+                    <ul class="features">
+                        <li>503 hp twin-turbo straight-six</li>
+                        <li>Aggressive looks and daily usability</li>
+                        <li>One of the best modern performance cars</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer>
@@ -76,6 +100,25 @@
             <p class="copyright">&copy; 2026 Wheels on Fire</p>
         </div>
     </footer>
+
+    <script>
+        function showDetails(car) {
+            // Hide both first
+            document.getElementById('f40-details').style.display = 'none';
+            document.getElementById('m4-details').style.display = 'none';
+
+            // Show the selected one
+            document.getElementById(car + '-details').style.display = 'flex';
+            document.getElementById('details-panel').style.display = 'block';
+
+            // Scroll to the details
+            document.getElementById('details-panel').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function hideDetails() {
+            document.getElementById('details-panel').style.display = 'none';
+        }
+    </script>
 
 </body>
 </html>
