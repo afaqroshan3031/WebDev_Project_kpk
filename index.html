@@ -3,39 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Web dev studio </title>
+    <title>Wheels on Fire | Home</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<nav>
-   
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-        
-</nav>
-   
-    <h1>Welcome to My Business</h1>
 
-  
-    <p>We provide high-quality services tailored to your needs. Check out our about page to learn more!</p>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="logo">Wheels on Fire</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
 
-    
-    <p><a href="about.html">Go to About Us Page</a></p>
+    <!-- Hero Section -->
+    <header class="hero">
+        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200" alt="Silver sports car on a scenic road" class="hero-image">
+        <p class="photo-credit">Photo by Unsplash</p>
+    </header>
 
-    
-    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="A beautiful sunset" width="500">
-    
-    
-    <p>Photo by John Doe on Unsplash</p>
+    <!-- Main Content -->
+    <main>
+        <section class="intro">
+            <h1>Find Your Perfect Ride</h1>
+            <p>Classic and modern cars with character. Honest advice and a bit of dry humour included.</p>
+        </section>
 
-    
-    <h2>Our Core Values</h2>
-    <ul>
-        <li>Quality</li>
-        <li>Integrity</li>
-        <li>Innovation</li>
-    </ul>
+        <section class="car-of-week" id="featured">
+            <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=600" alt="Featured sports car" class="featured-image">
+            <div class="featured-text">
+                <h2>Car of the Week</h2>
+                <h3>Porsche 918 Spyder</h3>
+                <p>A hybrid hypercar that still turns heads. Serious performance with everyday usability — something John can actually appreciate.</p>
+                <a href="about.html" class="btn">Learn More</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Wheels on Fire. Built for Web Development 1.</p>
+    </footer>
 
 </body>
 </html>
- 
