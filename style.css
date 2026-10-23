@@ -47,73 +47,86 @@ body {
     border-bottom: 2px solid #e67e22;
 }
 
-/* ===== Hero Section ===== */
+/* ===== Hero Image ===== */
 .hero {
     text-align: center;
-    padding: 30px 20px 20px;
+    padding: 0;
 }
 
 .hero-image {
-    max-width: 900px;
     width: 100%;
-    height: auto;
-    border-radius: 4px;
+    max-height: 480px;
+    object-fit: cover;
     display: block;
-    margin: 0 auto 25px;
 }
 
-.hero-text h1 {
-    font-size: 2.2rem;
+/* ===== Intro / Heading ===== */
+.intro {
+    text-align: center;
+    padding: 50px 20px 30px;
+}
+
+.intro h1 {
+    font-size: 2.4rem;
     margin-bottom: 12px;
     font-weight: 700;
 }
 
-.hero-text p {
-    color: #555;
-    font-size: 1.05rem;
-    max-width: 600px;
-    margin: 0 auto;
+.intro p {
+    color: #666;
+    font-size: 1.1rem;
 }
 
 /* ===== Car of the Week (Box Model) ===== */
 .car-of-week {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 25px;
-    border: 1px solid #e0e0e0;
-    border-radius: 6px;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 20px auto 60px;
+    padding: 30px;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
     background-color: #fafafa;
 }
 
 .featured-image {
-    width: 320px;
+    width: 420px;
+    max-width: 100%;
     height: auto;
-    border-radius: 4px;
+    border-radius: 6px;
 }
 
 .featured-text {
     flex: 1;
-    min-width: 250px;
+    min-width: 260px;
 }
 
 .featured-text h2 {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #888;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     margin-bottom: 8px;
 }
 
 .featured-text h3 {
-    font-size: 1.5rem;
-    margin-bottom: 12px;
+    font-size: 1.7rem;
+    margin-bottom: 6px;
 }
 
 .featured-text p {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
+    color: #444;
+}
+
+.features {
+    padding-left: 20px;
+    margin-top: 8px;
+}
+
+.features li {
+    margin-bottom: 6px;
     color: #444;
 }
 
@@ -212,7 +225,7 @@ footer {
 
 /* ID selector */
 #featured {
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 /* Descendant selector */
