@@ -18,7 +18,7 @@ body {
 .main-nav {
     background-color: #111;
     color: white;
-    padding: 15px 40px;
+    padding: 18px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -47,10 +47,10 @@ body {
     border-bottom: 2px solid #e67e22;
 }
 
-/* ===== Hero Section (Homepage) ===== */
+/* ===== Hero Section ===== */
 .hero {
     text-align: center;
-    padding: 30px 20px 10px;
+    padding: 30px 20px 20px;
 }
 
 .hero-image {
@@ -59,35 +59,23 @@ body {
     height: auto;
     border-radius: 4px;
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 25px;
 }
 
-.photo-credit {
-    font-size: 0.8rem;
-    color: #777;
-    margin-top: 8px;
-}
-
-/* ===== Intro Section ===== */
-.intro {
-    text-align: center;
-    padding: 40px 20px 20px;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.intro h1 {
+.hero-text h1 {
     font-size: 2.2rem;
     margin-bottom: 12px;
     font-weight: 700;
 }
 
-.intro p {
+.hero-text p {
     color: #555;
     font-size: 1.05rem;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-/* ===== Car of the Week (Box Model used here) ===== */
+/* ===== Car of the Week (Box Model) ===== */
 .car-of-week {
     display: flex;
     flex-wrap: wrap;
@@ -220,7 +208,7 @@ footer {
     color: #888;
 }
 
-/* ===== Extra Selectors for Lab Requirements ===== */
+/* ===== Lab Requirements ===== */
 
 /* ID selector */
 #featured {
@@ -231,5 +219,3 @@ footer {
 .main-nav .logo {
     letter-spacing: 0.5px;
 }
-
-/* Pseudo-class already used above with :hover and .active */
