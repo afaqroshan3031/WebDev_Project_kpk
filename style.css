@@ -64,11 +64,11 @@ body {
 .nav-links a:hover,
 .nav-links a:focus,
 .nav-links a.active {
-    color: #fff;
+    color: #111;                  /* dark text instead of white */
     background-color: #e67e22;
     padding: 2px 6px;
     border-radius: 3px;
-    outline: 3px solid #fff; /* Strong focus indicator */
+    outline: 3px solid #fff;      /* keep strong focus outline */
 }
 
 /* ===== Hero Image ===== */
@@ -180,6 +180,7 @@ body {
 .btn:hover,
 .btn:focus {
     background-color: #e67e22;
+    color: #111;                  /* dark text for contrast */
     outline: 3px solid #111;
 }
 
