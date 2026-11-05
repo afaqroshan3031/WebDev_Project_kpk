@@ -8,19 +8,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Navigation -->
-    <nav class="main-nav">
+    <nav class="main-nav" aria-label="Main navigation">
         <div class="logo">Wheels on Fire</div>
         <ul class="nav-links">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+            <li><a href="about.html">About John O'Reilly</a></li>
         </ul>
     </nav>
 
     <!-- Hero Image -->
     <header class="hero">
-        <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=1600" alt="Bugatti hypercar" class="hero-image">
+        <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=1600" alt="Black Bugatti hypercar on a road at dusk" class="hero-image">
     </header>
 
     <!-- Main Heading -->
@@ -29,13 +30,13 @@
         <p>Student-friendly cars. Real performance. Smart choices.</p>
     </section>
 
-    <main>
+    <main id="main-content">
         <!-- Car of the Week - Ferrari F40 -->
-        <section class="car-of-week" id="featured">
-            <img src="https://images.unsplash.com/photo-1762857341277-333d9d9991fd?w=800" alt="Ferrari F40" class="featured-image">
+        <section class="car-of-week" id="featured" aria-labelledby="featured-heading">
+            <img src="https://images.unsplash.com/photo-1762857341277-333d9d9991fd?w=800" alt="Red Ferrari F40 classic sports car" class="featured-image">
             
             <div class="featured-text">
-                <h2>Car of the Week</h2>
+                <h2 id="featured-heading">Car of the Week</h2>
                 <h3>Ferrari F40</h3>
                 <p>An absolute legend. Raw, focused and still one of the most exciting cars ever built. Pure driving experience with no unnecessary extras.</p>
                 
@@ -49,11 +50,11 @@
         </section>
 
         <!-- Most Viewed Car - BMW M4 Competition -->
-        <section class="car-of-week most-viewed">
-            <img src="https://images.unsplash.com/photo-1750509167705-6a53a9cf2a52?w=800" alt="BMW M4 Competition" class="featured-image">
+        <section class="car-of-week most-viewed" aria-labelledby="viewed-heading">
+            <img src="https://images.unsplash.com/photo-1750509167705-6a53a9cf2a52?w=800" alt="Silver BMW M4 Competition sports coupe" class="featured-image">
             
             <div class="featured-text">
-                <h2>Most Viewed Car</h2>
+                <h2 id="viewed-heading">Most Viewed Car</h2>
                 <h3>BMW M4 Competition</h3>
                 <p>Sharp, modern and seriously quick. The M4 Competition is the car people keep coming back to look at — and for good reason.</p>
                 
@@ -67,11 +68,11 @@
         </section>
 
         <!-- Looking for Luxury? - Rolls-Royce Phantom -->
-        <section class="car-of-week luxury">
-            <img src="https://images.unsplash.com/photo-1774759617565-10cfb245b7ef?w=800" alt="Rolls-Royce Phantom" class="featured-image">
+        <section class="car-of-week luxury" aria-labelledby="luxury-heading">
+            <img src="https://images.unsplash.com/photo-1774759617565-10cfb245b7ef?w=800" alt="White Rolls-Royce Phantom luxury sedan" class="featured-image">
             
             <div class="featured-text">
-                <h2>Looking for Luxury?</h2>
+                <h2 id="luxury-heading">Looking for Luxury?</h2>
                 <h3>Rolls-Royce Phantom</h3>
                 <p>The ultimate statement of luxury. Quiet, powerful and crafted to an almost obsessive level of detail. When only the best will do.</p>
                 
@@ -85,11 +86,11 @@
         </section>
 
         <!-- Get back on track - Toyota GR Sport -->
-        <section class="car-of-week gr-sport">
-            <img src="https://images.unsplash.com/photo-1758393605683-e28bb39d8917?w=800" alt="Toyota GR Sport" class="featured-image">
+        <section class="car-of-week gr-sport" aria-labelledby="gr-heading">
+            <img src="https://images.unsplash.com/photo-1758393605683-e28bb39d8917?w=800" alt="Toyota GR Sport performance car" class="featured-image">
             
             <div class="featured-text">
-                <h2>Get back on track</h2>
+                <h2 id="gr-heading">Get back on track</h2>
                 <h3>Toyota GR Sport</h3>
                 <p>Built for people who want real performance without the drama. The GR Sport brings proper handling, sharp looks and everyday reliability in one package.</p>
                 
@@ -101,13 +102,24 @@
                 </ul>
             </div>
         </section>
+
+        <!-- Accessibility features note (for the assignment) -->
+        <section class="accessibility-note" aria-labelledby="a11y-heading">
+            <h2 id="a11y-heading">Accessibility Features Added</h2>
+            <ul>
+                <li><strong>Larger easy-to-read fonts</strong> (18px base) and improved spacing for dyslexia support.</li>
+                <li><strong>High-contrast colours</strong> (dark text on light background) and underlined links so colour is not the only cue.</li>
+                <li><strong>Descriptive alt text</strong> on all images, proper headings, skip-to-content link, and strong keyboard focus styles for visual impairment support.</li>
+                <li>Simple consistent layout, short text blocks, and no flashy animations for neurodiverse users.</li>
+            </ul>
+        </section>
     </main>
 
     <footer>
         <div class="footer-content">
             <p><strong>Wheels on Fire</strong></p>
             <p>Phone: 01 234 5678</p>
-            <p>Email: john@wheelsonfire.ie</p>
+            <p>Email: <a href="mailto:john@wheelsonfire.ie">john@wheelsonfire.ie</a></p>
             <p>Location: Dublin, Ireland</p>
             <p class="copyright">&copy; 2026 Wheels on Fire</p>
         </div>

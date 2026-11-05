@@ -1,5 +1,3 @@
-/* Google Font is linked in the HTML files */
-
 /* ===== Basic Reset & Body ===== */
 * {
     margin: 0;
@@ -8,10 +6,27 @@
 }
 
 body {
-    font-family: 'Inter', Arial, sans-serif;
-    line-height: 1.6;
-    color: #222;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: 18px; /* Larger base for dyslexia */
+    line-height: 1.7; /* Better readability */
+    color: #111; /* High contrast dark text */
     background-color: #ffffff;
+    letter-spacing: 0.01em;
+}
+
+/* Skip link for keyboard / screen reader users */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #111;
+    color: #fff;
+    padding: 8px 16px;
+    z-index: 100;
+    text-decoration: none;
+}
+.skip-link:focus {
+    top: 0;
 }
 
 /* ===== Navigation ===== */
@@ -27,26 +42,33 @@ body {
 }
 
 .logo {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: 700;
+    letter-spacing: 0.5px;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 24px;
 }
 
 .nav-links a {
-    color: #ddd;
-    text-decoration: none;
-    font-size: 0.95rem;
+    color: #eee;
+    text-decoration: underline; /* Don't rely on colour alone */
+    text-underline-offset: 3px;
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 .nav-links a:hover,
+.nav-links a:focus,
 .nav-links a.active {
-    color: white;
-    border-bottom: 2px solid #e67e22;
+    color: #fff;
+    background-color: #e67e22;
+    padding: 2px 6px;
+    border-radius: 3px;
+    outline: 3px solid #fff; /* Strong focus indicator */
 }
 
 /* ===== Hero Image ===== */
@@ -58,46 +80,44 @@ body {
 .hero-image {
     width: 100%;
     height: auto;
-    max-height: 520px;
+    max-height: 480px;
     object-fit: cover;
     display: block;
 }
 
 /* ===== Intro / Heading ===== */
 .intro {
-    text-align: center;
-    padding: 40px 20px 30px;
-}
-
-.intro h1 {
-    font-size: 2rem;
-    margin-bottom: 12px;
-    font-weight: 700;
-}
-
-.intro p {
-    color: #666;
-    font-size: 1.05rem;
-    max-width: 600px;
+    text-align: left; /* Avoid justified text */
+    padding: 48px 24px 32px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
-/* ===== Car sections (Car of the Week + Most Viewed) ===== */
+.intro h1 {
+    font-size: 2.2rem;
+    margin-bottom: 16px;
+    font-weight: 700;
+    color: #111;
+}
+
+.intro p {
+    color: #222;
+    font-size: 1.15rem;
+    max-width: 700px;
+}
+
+/* ===== Car sections ===== */
 .car-of-week {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 32px;
     max-width: 1000px;
-    margin: 20px auto 40px;
-    padding: 24px;
-    border: 1px solid #e5e5e5;
+    margin: 24px auto 48px;
+    padding: 28px;
+    border: 1px solid #ddd;
     border-radius: 8px;
     background-color: #fafafa;
     align-items: center;
-}
-
-.most-viewed {
-    margin-bottom: 50px;
 }
 
 .featured-image {
@@ -110,35 +130,37 @@ body {
 
 .featured-text {
     flex: 1;
-    min-width: 260px;
+    min-width: 280px;
 }
 
 .featured-text h2 {
-    font-size: 0.85rem;
-    color: #888;
+    font-size: 0.95rem;
+    color: #333;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-    margin-bottom: 8px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    font-weight: 700;
 }
 
 .featured-text h3 {
-    font-size: 1.6rem;
-    margin-bottom: 10px;
+    font-size: 1.7rem;
+    margin-bottom: 12px;
+    color: #111;
 }
 
 .featured-text p {
-    margin-bottom: 14px;
-    color: #444;
+    margin-bottom: 16px;
+    color: #222;
 }
 
 .features {
-    padding-left: 20px;
-    margin-top: 6px;
+    padding-left: 22px;
+    margin-top: 8px;
 }
 
 .features li {
-    margin-bottom: 6px;
-    color: #444;
+    margin-bottom: 8px;
+    color: #222;
 }
 
 /* ===== Button ===== */
@@ -146,27 +168,32 @@ body {
     display: inline-block;
     background-color: #111;
     color: white;
-    padding: 10px 22px;
-    text-decoration: none;
+    padding: 12px 24px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
     border-radius: 4px;
-    font-size: 0.95rem;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 12px;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus {
     background-color: #e67e22;
+    outline: 3px solid #111;
 }
 
 /* ===== About Page ===== */
 .about-page {
     max-width: 900px;
-    margin: 40px auto;
-    padding: 0 20px;
+    margin: 48px auto;
+    padding: 0 24px;
 }
 
 .about-content {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 32px;
     align-items: flex-start;
 }
 
@@ -175,75 +202,100 @@ body {
     max-width: 280px;
     height: auto;
     border-radius: 4px;
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
 }
 
 .about-text {
     flex: 1;
-    min-width: 260px;
+    min-width: 280px;
 }
 
 .about-text h1 {
-    font-size: 1.8rem;
-    margin-bottom: 18px;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #111;
 }
 
 .about-text p {
-    margin-bottom: 14px;
-    color: #444;
+    margin-bottom: 16px;
+    color: #222;
 }
 
 .about-text h2 {
-    font-size: 1.15rem;
-    margin: 22px 0 10px;
+    font-size: 1.3rem;
+    margin: 24px 0 12px;
+    color: #111;
 }
 
 .reasons {
-    margin-bottom: 22px;
-    padding-left: 20px;
+    margin-bottom: 24px;
+    padding-left: 22px;
 }
 
 .reasons li {
-    margin-bottom: 6px;
+    margin-bottom: 8px;
+}
+
+/* Accessibility note section */
+.accessibility-note {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px 24px;
+    background: #f0f0f0;
+    border-left: 4px solid #111;
+}
+
+.accessibility-note h2 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.accessibility-note ul {
+    padding-left: 22px;
+}
+
+.accessibility-note li {
+    margin-bottom: 8px;
 }
 
 /* ===== Footer ===== */
 footer {
     text-align: center;
-    padding: 36px 20px;
-    margin-top: 40px;
-    border-top: 1px solid #eee;
-    background-color: #f9f9f9;
-    color: #555;
-    font-size: 0.95rem;
+    padding: 40px 20px;
+    margin-top: 48px;
+    border-top: 1px solid #ddd;
+    background-color: #f5f5f5;
+    color: #222;
+    font-size: 1rem;
 }
 
 .footer-content p {
-    margin-bottom: 5px;
+    margin-bottom: 6px;
 }
 
 .footer-content strong {
-    font-size: 1.1rem;
-    color: #222;
+    font-size: 1.2rem;
+    color: #111;
 }
 
 .copyright {
     margin-top: 16px;
-    font-size: 0.85rem;
-    color: #888;
+    font-size: 0.9rem;
+    color: #444;
 }
 
-/* ===== Lab Requirements ===== */
-#featured {
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+/* Focus visible for all interactive elements */
+:focus-visible {
+    outline: 3px solid #e67e22;
+    outline-offset: 2px;
 }
 
-.main-nav .logo {
-    letter-spacing: 0.5px;
-}
-
-/* ===== Responsive adjustments ===== */
+/* ===== Responsive ===== */
 @media (max-width: 768px) {
+    body {
+        font-size: 17px;
+    }
+
     .main-nav {
         padding: 14px 16px;
         flex-direction: column;
@@ -251,55 +303,22 @@ footer {
     }
 
     .intro h1 {
-        font-size: 1.7rem;
-    }
-
-    .intro p {
-        font-size: 1rem;
+        font-size: 1.8rem;
     }
 
     .car-of-week {
         flex-direction: column;
-        text-align: center;
+        text-align: left;
         padding: 20px 16px;
-        margin: 10px 16px 30px;
+        margin: 16px 16px 32px;
     }
 
     .featured-image {
         max-width: 100%;
     }
 
-    .featured-text {
-        text-align: center;
-    }
-
-    .features {
-        display: inline-block;
-        text-align: left;
-    }
-
     .about-content {
         flex-direction: column;
         align-items: center;
-        text-align: center;
-    }
-
-    .about-text {
-        text-align: center;
-    }
-
-    .reasons {
-        display: inline-block;
-        text-align: left;
-    }
-}
-
-@media (min-width: 769px) {
-    .intro h1 {
-        font-size: 2.3rem;
-    }
-
-    .hero-image {
-        max-height: 560px;
     }
 }
